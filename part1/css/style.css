@@ -1,0 +1,164 @@
+*{padding: 0; margin: 0;font-family: "微软雅黑","黑体","宋体";font-size: 14px;color: #333;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+img{border: none;vertical-align: bottom;}
+input,textarea{outline: none;}
+/* body{filter: grayscale(100%);} */
+.pubCon{margin: 0 auto;}
+.pubTit{text-align: center;}
+.pubTit h2 {font-weight: 400;padding-bottom: 10px;line-height: 1.6em;}
+.pubTit .line{width: 50px; height: 2px; background: #00abd9;display: inline-block;}
+.bodyBg {display: none;position: fixed;z-index: 2;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.3);}
+/* 头部 */
+.header{position: fixed; top: 0;left: 0;z-index: 3;height: 60px;width: 100%;background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid #00abd9;
+}
+.hdCon{display: flex;justify-content: space-between;align-items: center;}
+.hdLogo {line-height: 49px;}
+.hdNav ul {display: flex;height: 60px;}
+.hdNav li a{display: block;line-height: 60px; font-size: 18px;padding: 0px 30px;transition: 0.3s;position: relative;}
+.hdNav li:hover a,.hdNav li.active a{color: #00abd9;}
+.hdNav li a::after{display:block;content: "";width: 6px;height: 6px;opacity: 0;background-color: #00abd9;
+    border-radius: 50%;position: absolute;bottom: 10px;left: calc(50% - 3px);transition: 0.3s;}
+.hdNav li:hover a::after,.hdNav li.active a::after{opacity: 1;}
+
+.hdMenu {display: none;width: 40px;border: 1px solid #aaa;border-radius: 3px;cursor: pointer;}
+.hdMenu i{display: block;width: 26px;height: 2px;background: #aaa;margin: 6px auto;}
+/* 海报模块 */
+.banner{height: 400px;margin-bottom: 60px;}
+.banner a{display: block;height: 400px;background: no-repeat center;cursor: move;}
+.banner a.small {display: none;}
+.banner .swiper-pagination-bullet {background-color: #fff;}
+.swiper{
+    --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+    --swiper-navigation-color: #00abd9;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 30px;/* 设置按钮大小 */
+  }
+.mySwiper {width: 1920px;box-sizing: border-box; padding: 10px 0; background-color: #000;overflow: hidden;}
+.mySwiper .swiper-slide {width: 25%;height: 100%;opacity: 0.4;}
+.mySwiper .swiper-slide-thumb-active {opacity: 1;}
+.mySwiper2 {width: 1920px;}
+.mySwiper .swiper-slide .big{display: block;width: 266px;height: 100px;}
+.mySwiper .swiper-slide .small{width: 45px;height: 45px;}
+.banner .swiper-slide .small{display: none;}
+/* 服务模块 */
+.service{padding: 90px 0 50px;}
+.service .serCon{display: flex;text-align: center;}
+.serCon .box{display: block;height: 380px;padding: 0 30px;box-sizing: border-box;}
+.serCon .boxIcon{width: 200px;height: 200px;line-height: 200px;border: 1px solid #00abd9;
+    border-radius: 50%;margin: 0 auto;transition: 0.3s;}
+.serCon .boxIcon .iconfont{font-size: 90px;color: #00abd9;font-weight: 300;}
+.serCon h3{padding: 50px 0 25px;font-size: 22px;font-weight: 400;transition: 0.3s;}
+.serCon p{line-height: 1.8em;color: #666;}
+.serCon .box:hover h3 {color: #00abd9;}
+.serCon .box:hover .boxIcon{background-color: #00abd9;}
+.serCon .box:hover .boxIcon .iconfont{color: #fff;}
+/* 关于模块 */
+.about{padding: 90px 0; background: url('../images/about.jpg') no-repeat center fixed;}
+.abtTit h2{color: #fff;}
+.abtTit .line{background: #fff;}
+.abtText{font-size: 18px;color: #fff;line-height: 2em;opacity: 0.8;text-align: center;padding: 0 70px;}
+.btnGroup{width: 100%; text-align: center;font-size: 0;padding-top: 100px;}
+.btnGroup .btn{ display: inline-block;width: 150px;height: 50px;background: #ccc;color: #fff;
+    background: -webkit-gradient(linear,left top, right top,from(#f67b1f), to(#ef2d58));
+    background: -o-linear-gradient(left,#f67b1f, #ef2d58);
+    background: linear-gradient(to right,#f67b1f, #ef2d58);
+    border-radius: 5px;line-height: 50px;font-size: 20px;margin: 0 10px;transition: 0.3s;}
+.btnGroup .btnRit{background: -webkit-gradient(linear,left top, right top,from(#0fcfd7),to(#5960ff));background: -o-linear-gradient(left,#0fcfd7,#5960ff);background: linear-gradient(to right,#0fcfd7,#5960ff);}
+.btnGroup .btn:hover{transform: scale(1.05);}
+
+/* 案例展示 */
+.case{padding: 90px 0;}
+.caseCon{display: flex;justify-content: space-between;flex-wrap: wrap;}
+.caseCon .box{display: block;width: 32%;margin-bottom: 30px;position: relative;perspective: 600px;overflow: hidden;}
+.caseCon .box img {width: 100%;object-fit: cover;}
+.caseCon .pic{width: 100%;display: block;}
+.caseCon .ceng{display: block;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.8);color: #fff;
+position: absolute;top: 0;left: 0;display: flex;align-items: center;justify-content: center;flex-direction: column;
+padding: 0 30px; box-sizing: border-box;transform: rotateX(110deg);transform-origin: bottom;transition: 0.3s;}
+.caseCon .ceng h3{color: #fff;font-size: 20px;font-weight: 400;}
+.caseCon .ceng .line{width: 30px;height: 1px;background: #fff;margin: 10px 0 20px;}
+.caseCon .ceng p{color: #fff;opacity: 0.6;text-align: center;line-height: 1.8em;}
+.caseCon .box:hover .ceng{transform: rotateX(0);}
+
+/* 手机和平板端 */
+@media (max-width:992px) {
+    .pubCon{width: 100%;padding: 0 20px;box-sizing: border-box;}
+    .pubTit{padding-bottom: 10px;}
+    .pubTit h2 {font-size: 20px;padding: 0 5px;}
+    .pubTit .line{width: 40px;}
+    /* 头部 */
+    .hdNav {display: none;width: 100%;position: absolute;top: 63px;left: 0;}
+    .hdNav ul {display: flex;height: auto;flex-direction: column;text-align: center;}
+    .hdNav li a{line-height: 50px; background: rgba(255, 255, 255, 0.9);border-bottom: 1px solid #e8e8e8;}
+    .hdNav li a::after{bottom: 8px;}
+    .hdMenu {display: block;padding-left: 4px; box-sizing: border-box;}
+    .hdMenu i{transform-origin: left;transition: 0.3s;}
+
+    .hdMenu.active i:nth-child(1) {transform: rotate(28deg);width: 33px;}
+    .hdMenu.active i:nth-child(2) {opacity: 0;}
+    .hdMenu.active i:nth-child(3) {transform: rotate(-28deg);width: 33px;}
+    /* 海报模块 */
+    .mySwiper2,.mySwiper {width: 100%;}
+    .banner{height: 455px;width: 100%;margin-bottom: 10px;}
+    .banner .swiper-slide .big{display: none;}
+    .banner .swiper-slide .small{display: block;}
+    /* 服务模块 */
+    .service{padding: 10px 0 10px;}
+    .serCon {flex-wrap: wrap;}
+    .serCon .box{height: auto;width: 50%;margin-bottom: 30px;padding: 0 10px;}
+    .serCon .boxIcon{width: 100px;height: 100px;line-height: 100px;}
+    .serCon .boxIcon .iconfont{font-size: 60px;}
+    .serCon h3{padding: 10px 0 10px;font-size: 18px;}
+    
+/* 关于模块 */
+    .about{padding: 25px 0; background-attachment: scroll;}
+    .about br{display: none;}
+    .abtText{font-size: 14px;line-height: 1.5em;padding: 0;}
+    .btnGroup{width: 100%; text-align: center;font-size: 0;padding-top: 26px;}
+    .btnGroup .btn{ width: 90px;height: 40px;line-height: 40px;font-size: 14px;margin: 0 5px;}
+
+    /* 案例展示 */
+    .case{padding: 20px 0;box-sizing: border-box;}
+    .caseCon .box{width: 49%;margin-bottom: 10px;}
+    .caseCon .box:last-child{display: none;}
+    .caseCon .ceng{display: none;}
+    
+}
+/* 小屏幕显示器 */
+@media (min-width:  992px) {
+/* 电脑端设置样式的时候，页面宽度要留30px，因为要给右边的滚动条留位置 */
+    .pubCon{width: 960px;}
+    .pubTit{padding-bottom: 50px;}
+    .pubTit h2 {font-size: 30px;}
+    /* 服务模块 */
+    .service{padding: 70px 0;}
+    .serCon .box{padding: 0 10px;height: auto;}
+    .serCon .boxIcon{width: 140px;height: 140px;line-height: 140px;}
+    .serCon .boxIcon .iconfont{font-size: 80px;}
+    .serCon h3{padding: 40px 0 20px;}
+    .serCon p { font-size: 18px;}
+    /* 关于模块 */
+    .about{padding: 70px 0; background-attachment: scroll;}
+    .abtText{padding: 0;}
+}
+/* 大屏显示器 */
+@media (min-width:1300px) {
+    .pubCon {width: 1200px;}
+    .pubTit{padding-bottom: 60px;}
+    .pubTit h2 {font-size: 32px;}
+    /* 服务模块 */
+    .service{padding: 90px 0 50px;}
+    .serCon .box{height: auto;padding: 0 30px;}
+    .serCon .boxIcon{width: 200px;height: 200px;line-height: 200px;}
+    .serCon .boxIcon .iconfont{font-size: 90px;}
+    .serCon h3{padding: 50px 0 25px;}
+    /* 关于模块 */
+    .about{padding: 90px 0; background-attachment: fixed;}
+    .abtText{padding: 0 70px;}
+    
+}
+@media (min-width:1600px) {
+    /* 特大屏幕时设置固定宽度 */
+    .pubCon {width: 1500px;}
+}

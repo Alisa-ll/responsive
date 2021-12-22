@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .out {
+            box-sizing: border-box;
+            /* width: 1100px; */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: lightseagreen;
+
+        }
+
+        .out .box {
+            box-sizing: border-box;
+            height: 300px;
+            margin-bottom: 5px;
+            background-color: #ccc;
+            /* float: left; */
+        }
+
+        .out .box:nth-child(odd) {
+            background-color: pink;
+        }
+
+        .out .box:nth-child(even) {
+            background-color: skyblue;
+        }
+
+        @media (max-width:768px) {
+            .out {
+                width: 100%;
+            }
+
+            .out .box {
+                width: 320px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .out {
+                width: 680px;
+            }
+
+            .out .box {
+                width: 320px;
+            }
+        }
+
+        @media (min-width:992px) {
+            .out {
+                width: 960px;
+            }
+
+            .out .box {
+                width: 290px;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .out {
+                width: 1100px;
+            }
+
+            .out .box {
+                width: 260px;
+            }
+        }
+
+        @media (min-width:1400px) {
+            .out {
+                width: 1300px;
+            }
+
+            .out .box {
+                width: 300px;
+            }
+
+            .out .box:nth-child(odd) {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+</body>
+
+</html>

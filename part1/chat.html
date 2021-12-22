@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer service</title>
+    <style>
+        .chatBox {max-width: 992px;min-height: 260px;margin: 0 auto;padding: 15px 0;overflow: hidden;}
+        .user, .service {position: relative;;display: flex;box-sizing: border-box;align-content: center;max-width: 80%;min-width: 300px;padding: 10px;clear: both;}
+        .user .timeinfo, .service .timeinfo {position: absolute;box-sizing: border-box;padding: 2px 2px 1px;top: 8px;color: #333;font-size: 12px;white-space: nowrap;
+            border-radius: 3px;background: #FFF;opacity: 0.7;}
+        .user .timeinfo {left: 78px;}
+        .service .timeinfo {right: 78px;}
+        .user .timeinfo .name, .service .timeinfo .name {color: #fa2ddb;font-weight: 500;}
+        .user {float: left;}
+        .service {float: right;display: flex;}
+        .chatBox .user .avatar,.chatBox .service .avatar {box-sizing: border-box;width: 50px;height: 50px;border-radius: 50%;}
+        .chatBox .user .avatar {background: #ffe4c4;}
+        .chatBox .service .avatar {background-color: #2d95fc;}
+        .chatBox .user .chat,.chatBox .service .chat {position: relative;box-sizing: border-box;max-width: 400px;min-width: 200px;min-height: 50px;line-height: 25px;padding: 8px;
+            font-size: 16px;border-radius: 8px;word-break: break-all; word-wrap: break-word;white-space: normal;margin-top: 18px;}
+        .chatBox .user .chat {margin-left: 15px;border: 1px solid #ccc;background: #FFF;}
+        .chatBox .service .chat {background: #9eea6a;}
+        .chatBox .service .seravaBox {order: 2;}
+        .chatBox .service .chat {order: 1;margin-right: 15px;}
+        .chatBox .user .chat::before, .chatBox .service .chat::after {content: "";position: absolute;display: block;width: 0;height: 0;border: 6px solid transparent;}
+        .chatBox .user .chat::before {border-right-color: #ccc;left: -12px;top: 8px;}
+        .chatBox .service .chat::after {border-left-color: #9eea6a;right: -12px;top: 8px;}
+    </style>
+</head>
+<body>
+    <div class="chatBox">
+        <div class="user">
+            <div>
+                <div class="avatar"></div>
+            </div>
+            <div class="timeinfo">
+                <span class="name">用户</span>
+                <span>966551113126</span>
+                <span>2021年12月18日</span>
+                <span>下午3:39</span>
+            </div>
+            <div class="chat">fdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfr</div>
+        </div>
+        <div class="service">
+            <div class="seravaBox">
+                <div class="avatar"></div>
+            </div>
+            <div class="timeinfo">
+                <span class="name">客服</span>
+                <span>966551113126</span>
+                <span>2021年12月18日</span>
+                <span>下午3:39</span>
+            </div>
+            <div class="chat">dbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrfrwtgvfrcdbgvfrfeeafvrwtgvfrcdbgvfrf</div>
+        </div>
+    </div>
+</body>
+</html>

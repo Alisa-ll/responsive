@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式开发</title>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="fonts/icon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/public.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="pubCon hdCon">
+            <a href="#" class="hdLogo">
+                <img src="images/hd_logo.png" alt="">
+            </a>
+            <nav class="hdNav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="#">鲜花</a></li>
+                    <li><a href="#">植物</a></li>
+                    <li><a href="gives.html">礼品</a></li>
+                    <li><a href="chat.html">包月鲜花</a></li>
+                </ul>
+            </nav>
+            <div class="hdMenu">
+                <i></i><i></i><i></i>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner1.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case3.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner2.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case5.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image:url(images/banner3.jpg);"></a>
+                    <a href="#" class="small" style="background-image:url(images/case8.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner1.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case3.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner2.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case5.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image:url(images/banner3.jpg);"></a>
+                    <a href="#" class="small" style="background-image:url(images/case8.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner1.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case3.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image: url(images/banner2.jpg);"></a>
+                    <a href="#" class="small" style="background-image: url(images/case5.jpg);"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="big" style="background-image:url(images/banner3.jpg);"></a>
+                    <a href="#" class="small" style="background-image:url(images/case8.jpg);"></a>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner1.jpg" />
+                    <img class="small" src="./images/case3.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case5.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner1.jpg" />
+                    <img class="small" src="./images/case3.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case5.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner1.jpg" />
+                    <img class="small" src="./images/case3.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case5.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="big" src="./images/banner2.jpg" />
+                    <img class="small" src="./images/case8.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var thumbsSwiper = new Swiper('.banner .mySwiper', {
+            slidesPerView: 7,
+        });
+
+        var mySwiper = new Swiper('.banner .mySwiper2', {
+            thumbs: {
+                swiper: thumbsSwiper
+            },
+            pagination: {
+                 el: '.banner .swiper-pagination',
+             },
+             navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+             },
+        });
+    </script>
+    <section class="service">
+        <div class="pubTit serTit">
+            <h2>我们专注的服务内容</h2>
+            <div class="line"></div>
+        </div>
+        <div class="pubCon serCon">
+            <a href="#" class="box">
+                <div class="boxIcon">
+                    <i class="iconfont  icon-mobile-phone"></i>
+                </div>
+                <h3>APP开发</h3>
+                <p>步入社会，需要过硬技术作为入职敲门砖，提高入行起点，为后续发展打下坚实基础。</p>
+            </a>
+            <a href="#" class="box">
+                <div class="boxIcon">
+                    <i class="iconfont icon-phone"></i>
+                </div>
+                <h3>网站开发</h3>
+                <p>已经入行但是已到技术瓶颈，期望技术能力增强后，工作更加得心应手，能力再上一个台阶。</p>
+            </a>
+            <a href="#" class="box">
+                <div class="boxIcon">
+                    <i class="iconfont icon-cart-Empty"></i>
+                </div>
+                <h3>电商设计</h3>
+                <p>在传统行业工作，想快速进入互联网行业，但是缺少经验、技术、信息和人脉，希望通过学习获得提升。</p>
+            </a>
+            <a href="#" class="box">
+                <div class="boxIcon">
+                    <i class="iconfont icon-integral"></i>
+                </div>
+                <h3>技能教育</h3>
+                <p>想自学但总半途而废，没有清晰的学习路线和动力，需要老师监督和同学的陪伴，有清晰的目标规划。</p>
+            </a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="pubTit abtTit">
+            <h2>我们是不断创新、专注研究、充满活力的<br>用户体验专家</h2>
+            <div class="line"></div>
+        </div>
+        <div class="pubCon abtCon">
+            <div class="abtText">
+                美联教育集团分别于深圳、北京设立总部，团队达5000+人，拥有100多家教学中心。我们的目标是让中国各人群学习者，通过的学习，有效地英语口语、思维表达能力和出国，获得更美好的职场、学校、生活体验，更在学习过程中养成积极的人生态度，结交志同道合的朋友。
+            </div>
+            <div class="btnGroup">
+                <a href="#" class="btn btnLeft">咨询我们</a>
+                <a href="#" class="btn btnRit">了解更多</a>
+            </div>
+        </div>
+    </section>
+    <section class="case">
+        <div class="pubTit">
+            <h2>我们的项目案例展示</h2>
+            <div class="line"></div>
+        </div>
+        <div class="pubCon caseCon">
+            <a href="#" class="box">
+                <img src="images/case1.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case2.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case3.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case4.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case5.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case6.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case7.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case8.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <img src="images/case9.jpg" alt="">
+                <div class="ceng">
+                    <h3>标题文字</h3>
+                    <div class="line"></div>
+                    <p>这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容介绍这是该项目的内容</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <!-- 屏幕遮罩层 -->
+    <div class="bodyBg">
+
+    </div>
+
+</body>
+
+</html>
